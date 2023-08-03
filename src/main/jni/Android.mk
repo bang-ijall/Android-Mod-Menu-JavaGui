@@ -35,6 +35,7 @@ LOCAL_SRC_FILES := Main.cpp \
     ImGui/imgui_widgets.cpp \
     ImGui/imgui_tables.cpp \
     ImGui/backends/imgui_impl_opengl3.cpp \
+    ImGui/backends/imgui_impl_android.cpp \
 
 LOCAL_LDLIBS := -llog -landroid -lGLESv2 -lEGL
 

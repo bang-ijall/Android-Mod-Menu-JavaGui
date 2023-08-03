@@ -4,6 +4,7 @@
 #include "ImGui/imgui.h"
 #include "ImGui/imgui_internal.h"
 #include "ImGui/backends/imgui_impl_opengl3.h"
+#include "ImGui/backends/imgui_impl_android.h"
 #include "Dobby/dobby.h"
 
 bool setup;
@@ -25,6 +26,7 @@ EGLBoolean hook_eglSwapBuffers(EGLDisplay dpy, EGLSurface surface) {
     }
     ImGuiIO &io = ImGui::GetIO();
     ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplAndroid_NewFrame(glWidth, glHeight);
     ImGui::NewFrame();
     DrawESP(glWidth, glHeight);
     ImGui::EndFrame();
